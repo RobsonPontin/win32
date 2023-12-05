@@ -1,0 +1,15 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/ATLComProject/x64/Debug
+/ATLComProject/.vs/ATLComProject
+/ATLComProject/WinUiApp/Generated Files
+/ATLComProject/WinUiApp/x64/Debug
+/ATLComProject/ATLComProject/x64/Debug
+/ATLComProject/packages
+/ATLComProject/ATLComProject/ATLComProject.vcxproj.user
+/ATLComProject/ATLComProject/ATLComProject_i.c
+/ATLComProject/ATLComProject/ATLComProject_i.h
+/ATLComProject/ATLComProject/ATLComProject_p.c
+/ATLComProject/ATLComProject/dlldata.c

@@ -1,0 +1,42 @@
+// ATLComProject.idl : IDL source for ATLComProject
+//
+
+// This file will be processed by the MIDL tool to
+// produce the type library (ATLComProject.tlb) and marshalling code.
+
+import "oaidl.idl";
+import "ocidl.idl";
+
+[
+	object,
+	uuid(835ff4ef-aa54-4be6-9464-a4979891bce8),
+	dual,
+	nonextensible,
+	pointer_default(unique)
+]
+interface IATLSimpleObject : IDispatch
+{
+	[id(1), helpstring("method Start")] HRESULT Start();
+	[id(2), helpstring("method Stop")] HRESULT Stop();
+	[propget, id(3), helpstring("property FavoriteNumber")] HRESULT FavoriteNumber([out, retval] long* favNumber);
+};
+
+[
+	uuid(fb3fad2b-ee4b-4599-a2a2-fda2df2ac390),
+	version(1.0),
+	helpstring("ATLComProject 1.0 Type Library"),
+]
+library ATLComProjectLib
+{
+	importlib("stdole2.tlb");
+
+	[
+		uuid(78dfdea1-1ccf-4c14-b149-b6a5b04c835e)
+	]
+	coclass ATLSimpleObject
+	{
+		[default] interface IATLSimpleObject;
+	};
+};
+
+import "shobjidl.idl";
