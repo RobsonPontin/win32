@@ -1,0 +1,37 @@
+// ATLComProjectExe.idl : IDL source for ATLComProjectExe
+//
+
+// This file will be processed by the MIDL tool to
+// produce the type library (ATLComProjectExe.tlb) and marshalling code.
+
+import "oaidl.idl";
+import "ocidl.idl";
+
+[
+	object,
+	uuid(71e73e98-121c-4f56-ab54-46124a746c02),
+	dual,
+	nonextensible,
+	pointer_default(unique)
+]
+interface IATLSimpleObjectExe : IDispatch
+{
+	[propget, id(3), helpstring("property FavoriteNumber")] HRESULT FavoriteNumber([out, retval] long* favNumber);
+};
+[
+	uuid(c4a503dc-3770-4de2-8c69-3f39f7859ca6),
+	version(1.0),
+]
+library ATLComProjectExeLib
+{
+	importlib("stdole2.tlb");
+	[
+		uuid(a75eccf5-4cab-4726-9136-06129c42f144)
+	]
+	coclass ATLSimpleObjectExe
+	{
+		[default] interface IATLSimpleObjectExe;
+	};
+};
+
+import "shobjidl.idl";

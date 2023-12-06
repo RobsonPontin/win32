@@ -1,0 +1,16 @@
+HKCR
+{
+	NoRemove CLSID
+	{
+		ForceRemove {a75eccf5-4cab-4726-9136-06129c42f144} = s 'ATLSimpleObjectExe class'
+		{
+			ForceRemove Programmable
+			LocalServer32 = s '%MODULE%'
+			{
+				val ServerExecutable = s '%MODULE_RAW%'
+			}
+			TypeLib = s '{c4a503dc-3770-4de2-8c69-3f39f7859ca6}'
+			Version = s '1.0'
+		}
+	}
+}

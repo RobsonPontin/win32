@@ -17,7 +17,8 @@ namespace winrt::WinUiApp::implementation
             return m_favNumberFromCom;
         }
 
-        winrt::Windows::Foundation::IAsyncAction myButton_Click(IInspectable const& sender, Microsoft::UI::Xaml::RoutedEventArgs const& args);
+        winrt::Windows::Foundation::IAsyncAction btnComCallInprocServer32_Click(IInspectable const& sender, Microsoft::UI::Xaml::RoutedEventArgs const& args);
+        winrt::Windows::Foundation::IAsyncAction btnComCallLocalServer32_Click(IInspectable const& sender, Microsoft::UI::Xaml::RoutedEventArgs const& args);
 
     private:
         double m_favNumberFromCom{ 0.0 };
